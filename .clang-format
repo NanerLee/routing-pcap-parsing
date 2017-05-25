@@ -1,0 +1,236 @@
+# @Author: nanerlee
+# @Date:   2017-04-10T10:30:54+08:00
+# @Email:  nanerlee@qq.com
+# @Last modified by:   nanerlee
+# @Last modified time: 2017-04-10T21:13:16+08:00
+# @Copyright: Copyright (c) by NanerLee. All Rights Reserved.
+
+#基于5.0文档,最低版本要求3.8
+#-----------------------一般选项----------------
+# 基础样式(LLVM,Google,Chromium,Mozilla,WebKit)
+# BasedOnStyle: LLVM
+
+# 禁用当前format文件
+DisableFormat: false
+
+# (None,Cpp--C族语言,Java,JavaScript,Proto,TableGen)
+Language: Cpp
+
+# 语言标准
+Standard: Cpp11
+
+# 每行字符的长度(0 无限)
+ColumnLimit: 80
+
+# 最大连续空行
+MaxEmptyLinesToKeep: 1
+
+# 保留block开始的空行
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+#---------------------------------缩进-------------
+
+# tab宽度
+TabWidth: 4
+
+# 缩进宽度
+IndentWidth: 4
+
+# 是否用tab(Never,ForIndentation,Always)
+UseTab: Never
+
+# 构造函数初始化列表的缩进长度
+# ConstructorInitializerIndentWidth (unsigned)
+
+#折行时下一行的缩进长度
+ContinuationIndentWidth: 4
+
+# switch中的case缩进
+IndentCaseLabels: true
+
+# 如果在函数声明和定义的返回类型之后折行(见 AlwaysBreakAfterReturnType),定义是否缩进
+# IndentWrappedFunctionNames: false
+
+# 在命名空间中是否缩进(None,Inner,All)
+NamespaceIndentation: None
+
+# 访问修饰符的偏移
+# AccessModifierOffset (int)
+
+# 针对OC的block的缩进宽度
+# ObjCBlockIndentWidth: 4
+
+#----------------------------对齐--------------------------
+
+# 在左括号(圆,尖,方)后的参数是否对齐,(Align,DontAlign--此时 ContinuationIndentWidth 将起作用,AlwaysBreak--如果参数不能一行就break)
+AlignAfterOpenBracket: Align
+
+# 对齐连续的赋值语句
+AlignConsecutiveAssignments: true
+
+# 对齐连续的声明语句
+AlignConsecutiveDeclarations: true
+
+# 对齐换行符,true为尽可能向左,否则尽可能向右
+# AlignEscapedNewlinesLeft (bool)
+
+# 对齐运算表达式的操作数
+AlignOperands: true
+
+# 行尾注释(//)对齐
+AlignTrailingComments: true
+
+# 指针对准(* 和 &)
+DerivePointerAlignment: true
+
+# 指针对齐位置(Left,Right,Middle)
+PointerAlignment: Left
+
+#-----------------------------------一行显示---------
+
+# 允许将函数声明的所有参数放入下一行,即使 BinPackParameters 为 false
+# AllowAllParametersOfDeclarationOnNextLine (bool)
+
+# 允许较短 block 在同一行
+AllowShortBlocksOnASingleLine: false
+
+# 允许较短 case 在同一行
+AllowShortCaseLabelsOnASingleLine: false
+
+# 允许函数一行显示,可选的值(None,Empty,Inline,All)
+AllowShortFunctionsOnASingleLine: Empty
+
+# 允许较短的整个 if 语句在同一行
+AllowShortIfStatementsOnASingleLine: false
+
+# 允许较短的循环语句在同一行
+AllowShortLoopsOnASingleLine: false
+
+# 自动判断函数的定义和调用的参数能否在同一行,实验性功能
+# ExperimentalAutoDetectBinPacking: true
+
+# false 时函数调用的参数要么在同一行要么每个参数一行
+BinPackArguments: false
+
+# false 时函数声明的参数要么在同一行要么每个参数一行
+BinPackParameters: false
+
+#---------------------------break------------------
+
+# 总是在函数的返回类型后break(None,All,TopLevel,AllDefinitions,TopLevelDefinitions)
+# AlwaysBreakAfterReturnType
+
+# 总是在多行的字符串前break
+# AlwaysBreakBeforeMultilineStrings (bool)
+
+# 总是在 template 声明之后break
+# AlwaysBreakTemplateDeclarations
+
+# 在二元运算符前break(None,NonAssignment,All)
+BreakBeforeBinaryOperators: None
+
+# 在三元运算符前break
+# BreakBeforeTernaryOperators
+
+# 总是在构造函数初始化列表的逗号前break,并将逗号以冒号对齐
+BreakConstructorInitializersBeforeComma: false
+
+# 构造函数初始化列表不适合一行的话,每个初始值一行
+# ConstructorInitializerAllOnOneLineOrOnePerLine: true
+
+# 允许字符串字面值break,3.9中才有
+# BreakStringLiterals (bool)
+
+# 总是在一个域的每一个注解后break,java中
+# BreakAfterJavaFieldAnnotations (bool)
+
+# 在左大括号前break(Attach,Linux,Mozilla,Stroustrup,Allman,GUN,WebKit,Custom)
+BreakBeforeBraces: Custom
+
+# 控制括号的折叠样式,在 BreakBeforeBraces 设置为 Custom 时才会生效
+BraceWrapping: {
+    AfterClass: true,
+    AfterControlStatement: true,
+    AfterEnum: true,
+    AfterFunction: true,
+    AfterNamespace: false,
+    AfterObjCDeclaration: true,
+    AfterStruct: true,
+    AfterUnion: true,
+    BeforeCatch: true,
+    BeforeElse: true,
+    IndentBraces: false,
+}
+#-------------------penalty--------------
+
+PenaltyExcessCharacter: 1
+
+# PenaltyBreakBeforeFirstCallParameter: 100
+
+# PenaltyBreakComment: 10000
+
+# PenaltyBreakFirstLessLess: 120
+
+# PenaltyBreakString: 1000
+
+# PenaltyReturnTypeOnItsOwnLine (unsigned)
+
+#-------------------空格------------------
+
+# Ｃ风格的类型转换后插入空格
+SpaceAfterCStyleCast: false
+
+# 赋值运算符前加空格,false将会移除空格
+SpaceBeforeAssignmentOperators: true
+
+# 控制圆括号前是否加空格(Never,ControlStatements,Always)
+SpaceBeforeParens: ControlStatements
+
+# 行尾的注释(//)前加空格个数,只影响
+SpacesBeforeTrailingComments: 2
+
+# 在关键字 template 后边加空格,5.0中才有
+# SpaceAfterTemplateKeyword: false
+
+# 在空的圆括号中加空格
+SpaceInEmptyParentheses: false
+
+# 在尖括号中加空格
+SpacesInAngles: false
+
+# 在C风格的类型转换的括号中加空格
+SpacesInCStyleCastParentheses: false
+
+# 在圆括号中加空格
+SpacesInParentheses: false
+
+# 在方括号中加空格
+SpacesInSquareBrackets: false
+
+# C++11的大括号列表风格(大括号中没有空格,没有行break,缩进用 ContinuationIndentWidth,没有 block 缩进),类似函数调用,
+Cpp11BracedListStyle: true
+
+# 针对OC的属性名后加空格
+# ObjCSpaceAfterProperty: true
+
+# 针对OC的协议列表前加空格
+#　ObjCSpaceBeforeProtocolList: true
+
+# 在容器字面量中插入空格(OC和js中的数组和字典字面值)
+# SpacesInContainerLiterals: false
+
+# ----------------------------其他(注释,宏,头文件)--------------
+
+# CommentPragmas (std::string)
+# ForEachMacros (std::vector<std::string>)
+# IncludeCategories (std::vector<IncludeCategory>)
+# 3.9中才有
+# IncludeIsMainRegex (std::string)
+# MacroBlockBegin (std::string)
+# MacroBlockEnd (std::string)
+# 3.9中才有
+# JavaScriptQuotes (Leave, Single, Double)
+# 3.9中
+# ReflowComments (bool)
+# 3.9中
+# SortIncludes (bool)
